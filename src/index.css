@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/*  Variables  */
+:root {
+  --primary-blue: #2563eb;
+  --holiday-red: #ef4444;
+  --holiday-hover: #dc2626;
+  /* Light Mode Colors */
+  --bg-app: #F3F5F7;
+  --bg-card: #ffffff;
+  --bg-nav: #ffffff;
+  --text-main: #1e293b;
+  --text-header: #0f172a;
+  --text-muted: #708391;
+  --border-color: #e2e8f0;
+  --border-card: #e2e8f000;
+  --border-left: #cbcbcb;
+  --shadow-lg:
+    0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+  --tooltip-bg: #1e293b;
+  --font-family: 'Inter', 'Noto Sans Myanmar', sans-serif;
+  --grey-blue: hsl(237, 18%, 59%);
+  --red: hsl(345, 95%, 68%);
+  --top-red: hsl(345, 62%, 57%);
+  --desat-blue: hsl(236, 21%, 26%);
+  --vv-dark-blue: rgb(25, 26, 36);
+  --top-card-bg: rgb(44, 44, 68);
+}
+
+
+
+/* Dark Mode */
+[data-theme="dark"] {
+  --bg-app: #020617;
+  --bg-card: #1e293b;
+  --bg-nav: #0f172a;
+  --text-main: #f1f5f9;
+  --text-header: #ffffff;
+  --text-muted: #94a3b8;
+  --border-color: #334155;
+  --border-card: #334155;
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --tooltip-bg: #334155;
+  --border-left: #cbcbcb;
+}
+
+/*  Global Resets  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:var(--font-family);
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  line-height: 1.5;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  min-height: 100vh;
+  /* Firefox Font Smoothing Fix */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  
+  
+}
+h5 {
+  font-size: 2.5rem;
+  color: var(--text-header);
+  margin-bottom: 1rem;
+  font-weight:800;
+}
+@media screen and (max-width:765px) {
+  h5 {
+    font-size: 1.8rem;
+    color: var(--text-header);
+    margin-bottom: 0.5rem;
+    font-weight:400;
+  }
+}
+h6 {
+  font-size: 1rem;
+  color: var(--text-header);
+  margin-top: 0rem;
+  margin-bottom: 1.5rem;
+  font-weight:200;
+color: var(--text-header);
+}
+.brand {
+  font-weight: 700;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: var(--text-header);
+}
+
+.dim {
+  font-weight: 400;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/*  Animations  */
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

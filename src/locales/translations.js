@@ -1,0 +1,70 @@
+export const translations = {
+  en: {
+    title: "Myanmar Public Holidays",
+    subtitle: "Plan your year with our interactive calendar",
+    selectYear: "Select Year:",
+    prev: "Prev",
+    next: "Next",
+    user: "User:",
+    themeDark: "Dark Mode",
+    themeLight: "Light Mode",
+    lang: "မြန်မာ",
+    weekdays: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+    // English Holidays Names
+    holidays: {
+      independence: "Independence Day",
+      union: "Union Day",
+      peasants: "Peasants' Day",
+      tabaung: "Full Moon Day of Tabaung",
+      armedForces: "Armed Forces Day",
+      thingyanEve: "Thingyan Eve",
+      thingyanAkya: "Thingyan Akya",
+      thingyanAkat: "Thingyan Akat",
+      thingyanAtat: "Thingyan Atat",
+      myanmarNewYear: "Myanmar New Year Day",
+      kasung: "Full Moon Day of Kasung",
+      labor: "Labour Day",
+      martyrs: "Martyrs' Day",
+      waso: "Full Moon Day of Waso",
+      thadingyut: "Full Moon Day of Thadingyut",
+      tazaungmon: "Full Moon Day of Tazaungmon",
+      nationalDay: "National Day",
+      christmas: "Christmas Day"
+    }
+  },
+  mm: {
+    title: "မြန်မာနိုင်ငံ ရုံးပိတ်ရက်များ",
+    subtitle: "အလုပ်ပိတ်ရက်များကို ကြိုတင်ကြည့်ရှုပြင်ဆင်ပါ",
+    selectYear: "ခုနှစ်ရွေးချယ်ရန် -",
+    prev: "ယခင်",
+    next: "ရှေ့သို့",
+    user: "အသုံးပြုသူ -",
+    themeDark: "ညဘက်ပုံစံ",
+    themeLight: "နေ့ဘက်ပုံစံ",
+    lang: "English",
+    weekdays: ["တနင်္ဂနွေ", "တနင်္လာ", "အင်္ဂါ", "ဗုဒ္ဓဟူး", "ကြာသပတေး", "သောကြာ", "စနေ"],
+    months: ["ဇန်နဝါရီ", "ဖေဖော်ဝါရီ", "မတ်", "ဧပြီ", "မေ", "ဇွန်", "ဇူလိုင်", "သြဂုတ်", "စက်တင်ဘာ", "အောက်တိုဘာ", "နိုဝင်ဘာ", "ဒီဇင်ဘာ"],
+    // Myanmar Holidays Names
+    holidays: {
+      independence: "လွတ်လပ်ရေးနေ့",
+      union: "ပြည်ထောင်စုနေ့",
+      peasants: "တောင်သူလယ်သမားနေ့",
+      tabaung: "တပေါင်းလပြည့်နေ့",
+      armedForces: "တော်လှန်ရေးနေ့ (တပ်မတော်နေ့)",
+      thingyanEve: "သင်္ကြန်အကြိုနေ့",
+      thingyanAkya: "သင်္ကြန်အကျနေ့",
+      thingyanAkat: "သင်္ကြန်အကြတ်နေ့",
+      thingyanAtat: "သင်္ကြန်အတက်နေ့",
+      myanmarNewYear: "မြန်မာနှစ်သစ်ကူးနေ့",
+      kasung: "ကဆုန်လပြည့်နေ့",
+      labor: "အလုပ်သမားနေ့",
+      martyrs: "အာဇာနည်နေ့",
+      waso: "ဝါဆိုလပြည့်နေ့",
+      thadingyut: "သီတင်းကျွတ်လပြည့်နေ့",
+      tazaungmon: "တန်ဆောင်မုန်းလပြည့်နေ့",
+      nationalDay: "အမျိုးသားနေ့",
+      christmas: "ခရစ္စမတ်နေ့"
+    }
+  }
+};

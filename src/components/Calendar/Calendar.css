@@ -1,0 +1,183 @@
+/* Layout Wrapper */
+
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  padding-bottom: 100px;
+}
+@media screen and (max-width: 765px) {
+  .app-wrapper {
+    padding-top: 140px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (max-width: 440px) {
+  .app-wrapper {
+    padding-top: 140px;
+     padding-bottom: 200px;
+  }
+}
+/*  Hero Section */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.hero h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-header);
+}
+
+.hero p {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/*  Desktop Styles  */
+
+.calendar-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+  width: 90%;
+  max-width: 1232px;
+  margin: 0 auto 5rem;
+}
+@media (max-width: 1200px) {
+  .calendar-container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 765px) {
+  .thingyan-container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+@media (max-width: 480px) {
+  .calendar-container {
+    width: 100%;
+    gap: 1rem;
+    margin: 0 auto 0;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
+
+/* Controls & Pagination */
+.controls {
+  margin-top: auto;
+  background: var(--bg-nav);
+  padding: 1.5rem 2.5rem;
+  border-top: 1px solid var(--border-color);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 16px;
+  padding-right: 16px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.pagination button {
+  padding: 0.5rem 1.25rem;
+  margin-right: 0.5rem;
+  background: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: var(--primary-blue);
+  color: white;
+  border-color: var(--primary-blue);
+}
+
+.pagination button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+@media screen and (max-width: 765px) {
+  .controls {
+    padding: 24px;
+  }
+  .footer-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/* Year Select Container */
+
+.year-select-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.year-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+.year-dropdown {
+  appearance: none;
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  padding: 0.6rem 2.5rem 0.6rem 1rem;
+  line-height: 1.6;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.2s ease;
+  font-family: "Pyidaungsu", "Inter", sans-serif;
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 14px;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+.year-select-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: auto;
+  padding: 5px 0;
+}
+
+.year-dropdown:hover {
+  border-color: var(--primary-blue);
+}
+
+[data-theme="dark"] .year-dropdown {
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2394a3b8%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%3E%3C%2Fpolyline%3E%3C%2Fsvg%3E");
+}
