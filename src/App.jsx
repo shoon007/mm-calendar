@@ -27,21 +27,23 @@ const App = () => {
   const t = translations[lang];
 
   // Fetch Holiday Data
-
   useEffect(() => {
-     // Base URL 
-    let baseUrl = import.meta.env.BASE_URL;
-    if (!baseUrl.endsWith('/')) {
-      baseUrl += '/';
+    // Base URL 
+    let base = import.meta.env.BASE_URL || '/';
+    
+    
+    if (!base.endsWith('/')) {
+      base += '/';
     }
 
-    // Logic for both Paths 
+    // Build Full URL 
+    const finalPath = `${base}data/holidays.json`;
 
-    const fetchUrl = `${baseUrl}data/holidays.json`;
+    //console.log("Fetching from:", finalPath); 
 
-    fetch(fetchUrl)
+    fetch(finalPath)
       .then(res => {
-        if (!res.ok) throw new Error("File not found");
+        if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
         return res.json();
       })
       .then(data => {
@@ -51,6 +53,9 @@ const App = () => {
       })
       .catch(err => console.error("Holiday Fetch Error:", err));
   }, []);
+
+
+  
   const navAssets = { logo1, logo2, sun, moon, profile, US, MN };
 
   return (
