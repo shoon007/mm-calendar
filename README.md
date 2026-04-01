@@ -1,4 +1,8 @@
-# 🇲🇲 Myanmar Calendar (React + Vite)
+# Myanmar Calendar (React + Vite)
+
+<p align="center">
+  <img src="./src/assets/mockup.jpg" alt="Myanmar Calendar Mockup" width="100%">
+</p>
 
 A modern, high-performance Myanmar Calendar application built with **React 18** and **Vite**. This project features a professional UI, multilingual support (EN/MM), and accurate public holiday tracking from 2021 to 2026.
 
@@ -59,3 +63,5 @@ This project follows professional documentation standards to ensure high code qu
  * @param {number|string} num - The value to be converted.
  * @returns {string} - The converted Myanmar digit string.
  */
+
+
