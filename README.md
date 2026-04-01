@@ -1,4 +1,4 @@
-# 🇲🇲 Myanmar Calendar (React + Vite)
+# Myanmar Calendar (React + Vite)
 
 A modern, high-performance Myanmar Calendar application built with **React 18** and **Vite**. This project features a professional UI, multilingual support (EN/MM), and accurate public holiday tracking from 2021 to 2026.
 
