@@ -27,37 +27,30 @@ const App = () => {
   const t = translations[lang];
 
   // Fetch Holiday Data
+
   useEffect(() => {
-    // Base URL 
-    const baseUrl = import.meta.env.BASE_URL || '/';
-    
+     // Base URL 
+    let baseUrl = import.meta.env.BASE_URL;
+    if (!baseUrl.endsWith('/')) {
+      baseUrl += '/';
+    }
+
     // Logic for both Paths 
-    const primaryUrl = `${baseUrl}data/holidays.json`.replace(/\/\/+/g, '/');
-    const fallbackUrl = '/mm-calendar/data/holidays.json';
 
-    const fetchData = (url) => {
-      return fetch(url)
-        .then(res => {
-          if (!res.ok) throw new Error("Not Found");
-          return res.json();
-        });
-    };
+    const fetchUrl = `${baseUrl}data/holidays.json`;
 
-    //Testing primary url ,if it fails then fallback url will be tested
-    fetchData(primaryUrl)
-      .then(data => {
-        if (data?.holidays) setHolidays(data.holidays);
+    fetch(fetchUrl)
+      .then(res => {
+        if (!res.ok) throw new Error("File not found");
+        return res.json();
       })
-      .catch(() => {
-        
-        fetchData(fallbackUrl)
-          .then(data => {
-            if (data?.holidays) setHolidays(data.holidays);
-          })
-          .catch(err => console.error("Final Fetch Error:", err));
-      });
+      .then(data => {
+        if (data?.holidays) {
+          setHolidays(data.holidays);
+        }
+      })
+      .catch(err => console.error("Holiday Fetch Error:", err));
   }, []);
-  
   const navAssets = { logo1, logo2, sun, moon, profile, US, MN };
 
   return (
