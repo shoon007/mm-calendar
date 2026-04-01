@@ -1,0 +1,162 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+.cards-wrapper {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 20px;
+  perspective: 1000px;
+  background-image: url('../../assets/Frame\ 36545.png');
+  max-width: 1232px;
+  width: 90%;
+  border-radius: 10px;
+  min-height: 160px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin:auto;
+  padding-top:20px;
+  padding-bottom:20px;
+  padding-right:144px;
+  margin-bottom: 2rem;
+  
+
+}
+
+@media screen and (max-width:1000px) {
+   .cards-wrapper{
+    padding-right:80px
+ 
+  }
+ 
+}
+@media screen and (max-width:765px) {
+
+  .cards-wrapper{
+    padding-right: 0;
+    justify-content: center;
+    background-size: cover;
+    background-position: right;
+    width:100%;
+    min-height:228px;
+    border-radius: 10px;
+     background-image: url('../../assets/Frame\ 36545\ \(1\).png');
+    align-items: end;
+  }
+}
+/* countdown flip card */
+.flip-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width:78px;
+  height:94px;
+  border-radius: 6px;
+}
+.unit-label {
+  font-size: 14px;
+  text-align: center;
+  font-weight: 800;
+  font-family: var(--font-family);
+  line-height: 20px;
+  letter-spacing: -0.02em; 
+  margin-top: 4px;
+  background: linear-gradient(to bottom, #7D9EE0, #1654A1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+    display: block; 
+}
+.top-half,
+.bottom-half,
+.top-flip,
+.bottom-flip {
+  height: 47px;
+  width:78px;
+  overflow: hidden;
+  position: absolute;
+  font-size: 36px;
+  font-weight: 900;
+  font-family:var(--font-family);
+  display: flex;
+  justify-content: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.top-half,
+.top-flip {
+  top: 0;
+  background-color: var(--top-card-bg);
+  color:  #F7A529;
+  border-radius: 6px 6px 0 0;
+  align-items: flex-end;
+}
+
+.bottom-half,
+.bottom-flip {
+  bottom: 0;
+  background-color: var(--desat-blue);
+  color:  #FFF643;
+  border-radius: 0 0 6px 6px;
+  align-items: flex-start;
+}
+
+.top-half span,
+.top-flip span {
+  transform: translateY(50%);
+  
+}
+.bottom-half span,
+.bottom-flip span {
+  transform: translateY(-50%);
+}
+@media screen and (max-width:500px) {
+  .cards-wrapper{
+    gap: 10px;
+  }
+  .flip-card {
+      
+      width: 71px;
+      height: 80px;
+    
+  }
+  .top-half, .bottom-half, .top-flip, .bottom-flip{
+    width: 71px;
+    height: 40px;
+    font-size: 31px;
+  }
+
+
+}
+/* The Flip Animations */
+.top-flip {
+  z-index: 5;
+  transform-origin: bottom;
+  animation: flip-top 0.4s ease-in forwards;
+}
+
+.bottom-flip {
+  z-index: 4;
+  transform-origin: top;
+  transform: rotateX(90deg);
+  animation: flip-bottom 0.4s ease-out 0.4s forwards;
+}
+
+@keyframes flip-top {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-90deg);
+  }
+}
+
+@keyframes flip-bottom {
+  0% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
