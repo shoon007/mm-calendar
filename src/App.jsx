@@ -57,6 +57,7 @@ const App = () => {
           .catch(err => console.error("Final Fetch Error:", err));
       });
   }, []);
+  
   const navAssets = { logo1, logo2, sun, moon, profile, US, MN };
 
   return (
